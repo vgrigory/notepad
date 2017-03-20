@@ -1,0 +1,14 @@
+<button uib-popover-template="dialogTemplate"
+    popover-title="Notes"
+    type="button"
+    class="btn btn-default footerButton"
+    popover-class="notesDialog"
+    popover-placement="top-right"
+    popover-is-open="popoverIsOpen"
+    ng-click="popoverIsOpen = !popoverIsOpen"
+>
+    <span class="glyphicon"
+        ng-class="{'glyphicon-comment': !popoverIsOpen, 'glyphicon-remove': popoverIsOpen}"
+        aria-hidden="true">
+    </span>
+</button>

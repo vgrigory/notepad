@@ -1,0 +1,22 @@
+<div>
+    <div class="dialogNotes">
+        <div class="row well well-sm"
+            ng-repeat="note in notes track by $index"
+            ng-bind-html="note"
+            id="dialogNote{{$index}}"
+        >
+        </div>
+    </div>
+    <div class="input-group dialogFooter">
+        <textarea class="form-control" placeholder="Input note text" rows="1" msd-elastic ng-model="$parent.newNote" />
+        <span class="input-group-btn newNoteButton">
+            <button class="btn btn-default" type="button"
+                ng-click="storeNote($parent.newNote)"
+                ng-disabled="!$parent.newNote"
+                ng-attr-title="{{$parent.newNote ? 'Add new note' : 'Enter a note text first'}}"
+            >
+                <span class="glyphicon glyphicon-send"></span>
+            </button>
+        </span>
+    </div>
+</div>

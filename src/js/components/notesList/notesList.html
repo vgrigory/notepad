@@ -1,0 +1,15 @@
+<div class="notesList">
+    <div uib-alert
+        class="alert alert-info"
+        ng-show="!notes.length"
+    >
+        Your notepad is empty at the moment.<br />
+        Click on a button on the corner to start.
+    </div>
+    <div class="row well well"
+        ng-repeat="note in notes track by $index"
+        ng-bind-html="note"
+        id="note{{$index}}"
+    >
+    </div>
+</div>
